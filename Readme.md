@@ -1,3 +1,20 @@
+# Hola!!
+
+Haz un Fork de este repositorio, después clonalo a tu local
+
+
+
+Parece que hay un error en el código de este branch, pero... antes funcionaba
+
+Antes de empezar teclea history -c
+
+Recuerdas que comando utilizar para encontrar el error?
+
+Utiliza el comando para encontrar el commit culpable y haz un revert para arreglarlo
+
+
+Cuando termines haz un checkout a la rama personal_info
+
 Parte 5
 
 Escribe en la terminal
@@ -35,3 +52,6 @@ y guardalo como jpg en el repositorio
 Haz un merge a master y un push a tu repositorio de github
 
 Agrégame como colaborador a tu repositorio y sube la url de tu repo a classroom :) 
+
+
+
