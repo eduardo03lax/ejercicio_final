@@ -87,16 +87,22 @@ echo Parte3 ***************************************************
 Contesta las siguientes preguntas
 
 1. Que es SCRUM?
+   Una metodología de trabajo colaborativo donde se junta un equipo de desarrollo, un SCRUM master y un Product Owner para crear un proyecto de software, trabajando en equipos grandes  hasta lograr una sinergía.
 
 2. Cual Rol dentro de SCRUM te llama mas la atención y porque?
+   PO, por que me gusta tener el control de cómo espero que sean mis proyectos y a veces esa visión se desvía por mal entendidos, y cómo el objetivo del PO es que se logre la visión del proyecto me gusta la idea de guiar a un equipo para lograr lo que exactamente estaba pensando, o similar. 
 
 3. Cual es la herramienta que mas recuerdas de SCRUM?
+   Sprint, es una actividad de lazo cerrado donde el equipo de desarrollo trabaja en realizar una tarea o varias tareas, al final del tiempo del sprint se hace un análisis de resultados, y se realiza una retroalimentación para mejorar en la siguiente iteración.
 
 4. Cual es la diferencia entre el PO y el SCRUM MASTER?
+   El SCRUM master se encarga de que el equipo de desarrollo trabaje de manera independiente, facilitando todas las herramientas y resolviendo los problemas que puedan tener. El PO es el especialista del proyecto, conoce todos los detalles técnicos y se encarga de alcanzar esos objetivos, además de discutir con el cliente.
 
 5. Cuanto puede durar un Sprint?
+   Lo ideal son 3 semanas.
 
 6. Consideras que la junta de retrospectiva es importante? porque?
+   Si, en trabajos colaborativos de muchas personas es importante resolver todos los problemas de comunicación o de desarrollo que se hayan presentado para alcanzar una sinergia casi perfecta y que el trabajo en equipo funcione.
 
 
 Cuando termines haz un merge de personal info a este branch
