@@ -9,6 +9,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Random;
 
@@ -18,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        puntos = (TextView) findViewById(R.id.puntos);
     }
 
     public TextView c0;
@@ -31,8 +43,13 @@ public class MainActivity extends AppCompatActivity {
     public TextView c8;
     public TextView c9;
 
+    public TextView puntos;
+
     public int contador_secuencia;
     public int contador_meta;
+
+    public String luis = "Luis";
+    public String puntaje = "";
 
     public Button azul_Button;
     public Button verde_Button;
@@ -190,7 +207,42 @@ public class MainActivity extends AppCompatActivity {
         verde_Button.setText(texto);
         amarillo_Button = (Button) findViewById(R.id.bamarillo);
         amarillo_Button.setText(texto);
+        puntaje = String.valueOf(contador_secuencia);
+
+        puntos.setText("Record: "+ puntaje + " pts");
+        datosusandoVolley();
     }
+    private void datosusandoVolley() throws JSONException {
+        String url = "https://ejemplonotomado.000webhostapp.com/testM.php";
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("puntos",puntaje);
+        jsonObject.put("nombre",luis);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            Toast response_toast = Toast.makeText(getApplicationContext(), "e " + response.getString("result"), Toast.LENGTH_LONG);
+                            response_toast.show();
+                            Log.d("TEST", response.getString("result"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("TEST", error.getMessage().toString());
+                Toast response_toast = Toast.makeText(getApplicationContext(), "e " + error.getMessage(), Toast.LENGTH_LONG);
+                response_toast.show();
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+    }
+
     public void azul_press(View view) {
         boton(ContextCompat.getColor(this, R.color.blue));
     }

@@ -96,7 +96,18 @@
 
 
     </LinearLayout>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/puntos"
+        android:text="Lucharan a dos de tres caídas"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
